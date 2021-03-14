@@ -155,27 +155,29 @@ let max $(X_1,X_2)$=n , $X_i\in \{ 1,2,3,4,5,6 \}, i=1,2$ so $X \in \{ 1,2,3,4,5
 
 \vspace{0.5cm}
 $p_{X_i}(n)= Pr(X_i=n)= \begin{cases}
-\dfrac{1}{6},  \test{  if } 1 \leq n \leq 6\\
+\dfrac{1}{6},  \test{ if } 1 \leq n \leq 6 \\
 0,  \test{  otherwise }
 \end{cases}$
 
  $p_X(n) =Pr(max (X_1,X_2)=n)$
  
-\begin{equation} \label{eu_eqn}
+\begin{equation} \label{eqn_(0.0.1)}
     = Pr(X_1=n\text{ and }X_2<n)+Pr(X_2=n\text{ and }X_1<n)+Pr(X_1=X_2=n)
 \end{equation}
  Since choosing of $X_1,X_2$ are independent events we can write 
  $$Pr(X_1 \text{ and }X_2)=Pr(X_1).Pr(X_2)$$
- Substituting this in (0.0.1) gives us
+ Substituting this in \eqref{eqn_(0.0.1)} gives us
  $$p_X(n)=Pr(X_1=n).Pr(X_2<n)+Pr(X_2=n).Pr(X_1<n)+Pr(X_1=n).Pr(X_2=n)$$
 $$\Longrightarrow p_X(n)=Pr(X=n)=\dfrac{1}{6}.\dfrac{(n-1)}{6}+\dfrac{1}{6}.\dfrac{(n-1)}{6}+\dfrac{1}{6}.\dfrac{1}{6}$$
 $$\Longrightarrow p_X(n)=Pr(X=n)=\dfrac{(2n-1)}{36}$$
 The expectation value of X represented by E(X) is given by
 $$E(x)=\sum_{X=1}^{6} Pr(X=n).X$$
-$$\Longrightarrow E(X)=\sum_{X=1}^{6} \dfrac{(2X-1)}{36}.X$$
-$$\Longrightarrow E(X)=\sum_{X=1}^{6} \dfrac{(2X^2-X)}{36}$$
-$$\Longrightarrow E(X)=\dfrac{2}{36}.\sum_{X=1}^{6} X^2-\dfrac{1}{36}\sum_{X=1}^{6} X$$
-$$\Longrightarrow E(X)=\dfrac{2}{36}.91-\dfrac{1}{36}.21$$
-$$\Longrightarrow E(X)= 4.4722$$
+\begin{align}
+& \Longrightarrow E(X)=\sum_{X=1}^{6} \dfrac{(2X-1)}{36}.X\\
+& \Longrightarrow E(X)=\sum_{X=1}^{6} \dfrac{(2X^2-X)}{36}\\
+& \Longrightarrow E(X)=\dfrac{2}{36}.\sum_{X=1}^{6} X^2-\dfrac{1}{36}\sum_{X=1}^{6} X\\
+& \Longrightarrow E(X)=\dfrac{2}{36}.91-\dfrac{1}{36}.21\\
+& \Longrightarrow E(X)= 4.4722
+\end{align}
 
 \end{document}
