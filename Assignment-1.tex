@@ -1,0 +1,100 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\title{Assignment-1}
+\author{S. RITHVIK REDDY- cs20btech11049}
+\date{}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{nopageno}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{hyperref}
+\setlength{\columnsep}{0.5cm}
+\setlength{\parindent}{0em}
+\usepackage{color}
+
+\usepackage{comment}
+
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{black}}
+
+\begin{document}
+\maketitle
+\noindent
+Download all python codes from here
+
+\begin{multicols*}{2}
+\noindent
+\fbox{%
+    \parbox{0.45\textwidth}{%
+        \url{https://github.com/rithvikreddy6300/Assignment-1/blob/main/Assignment-1.py}
+    }%
+    }
+    
+\vspace{0.3cm}
+and latex-tikz codes from  
+
+\vspace{0.3cm}  
+    
+\fbox{%
+    \parbox{0.45\textwidth}{%
+        \url{https://github.com/rithvikreddy6300/Assignment-1/blob/main/Assignment-1.tex}
+    }%
+    }
+   
+\vspace{0.5cm}
+\textbf{QUESTION-4.10}
+\vspace{0.5cm}
+
+Two numbers are selected at random (without replacement) from the first six positive integers. Let X denote the larger of the two numbers obtained. Find E(X)?
+
+
+
+\vspace{0.5cm}
+\textbf{SOLUTION}
+\vspace{0.5cm}
+
+Let $X_1,X_2$ be the $1^{st},2^{nd}$ numbers drawn randomly from 1 to 6 and X = max $(X_1,X_2)$
+
+let max $(X_1,X_2)$=n , $X_i\in \{ 1,2,3,4,5,6 \}, i=1,2$ so $X \in \{ 1,2,3,4,5,6 \}$, The probability mass function is 
+
+\vspace{0.5cm}
+$p_{X_i}(n)= Pr(X_i=n)= \begin{cases}
+\dfrac{1}{6},  \text{ if } 1 \leq n \leq 6 \\
+0,  \text{  otherwise }
+\end{cases}$
+
+ $p_X(n) =Pr(\text{max } (X_1,X_2)=n)$
+ \begin{multline}
+ \noindent
+ =Pr(X_1=n\text{ and }X_2<n)
+ +Pr(X_2=n\text{ and }X_1<n)\\+Pr(X_1=X_2=n)\label{eqn_(0.0.2)}
+\end{multline}
+ 
+
+ Since choosing of $X_1,X_2$ are independent events we can write 
+ $$Pr(X_1 \text{ and }X_2)=Pr(X_1).Pr(X_2)$$
+ Substituting this in \eqref{eqn_(0.0.2)} gives us
+\begin{multline}
+p_X(n)=Pr(X_1=n).Pr(X_2<n)+Pr(X_2=n)\\
+.Pr(X_1<n)+Pr(X_1=n).Pr(X_2=n)\\
+\end{multline}
+$$\Longrightarrow p_X(n)=Pr(X=n)=\dfrac{1}{6}.\dfrac{(n-1)}{6}+\dfrac{1}{6}.\dfrac{(n-1)}{6}
++\dfrac{1}{6}.\dfrac{1}{6}$$
+$$\Longrightarrow p_X(n)=Pr(X=n)=\dfrac{(2n-1)}{36}$$
+The expectation value of X represented by E(X) is given by
+$$E(x)=\sum_{X=1}^{6} Pr(X=n).X$$
+\begin{align}
+& \Longrightarrow E(X)=\sum_{X=1}^{6} \dfrac{(2X-1)}{36}.X\\
+& \Longrightarrow E(X)=\sum_{X=1}^{6} \dfrac{(2X^2-X)}{36}\\
+& \Longrightarrow E(X)=\dfrac{2}{36}.\sum_{X=1}^{6} X^2-\dfrac{1}{36}\sum_{X=1}^{6} X\\
+& \Longrightarrow E(X)=\dfrac{2}{36}.91-\dfrac{1}{36}.21\\
+& \Longrightarrow E(X)= \textbf{4.4722}
+\end{align}
+Therefore the expectation value of X, E(X)= \textbf{4.4722}.
+\end{multicols*}
+\end{document}
