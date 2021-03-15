@@ -61,20 +61,19 @@ Two numbers are selected at random (without replacement) from the first six posi
 The question can be seen as choosing a number first from 1 to 6 numbers and then choosing one more from the remaining 5 numbers, Let $X_1$ be the $1^{st}$ numbers drawn randomly from 1 to 6 and $X_2$be the $2^{nd}$ number drawn from remaining and $X = \text{max } (X_1,X_2)$
 
 \vspace{0.3cm}
-$Pr(X_1=n_1)= \begin{cases}
+\begin{align}
+& Pr(X_1=n_1)= \begin{cases}
 \dfrac{1}{6},  \text{ if } 1 \leq n_1 \leq 6\\
 0,  \text{  otherwise }
-\end{cases}$
-
-\vspace{0.3cm}
-$Pr(X_2=n_2)= \begin{cases}
+\end{cases}\\
+& Pr(X_2=n_2)= \begin{cases}
 \dfrac{1}{5},  \text{ if } 1 \leq n_2 \leq 6 \text{ and }n_2 \neq n_1\\
 0,  \text{  otherwise }
-\end{cases}$
+\end{cases}
+\end{align}
 
 let max $(X_1,X_2)=i$ and $Pr(X=i)$ denotes the probability that $X = \text{max } (X_1,X_2)=i$
  \begin{multline}
- \noindent
 Pr(X=i)=Pr(X_1=i\text{ and }X_2<i)\\
  +Pr(X_2=i\text{ and }X_1<i) \label{eqn_(0.0.1)}
 \end{multline}
