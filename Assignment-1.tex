@@ -72,10 +72,10 @@ $Pr(X_2=n_2)= \begin{cases}
 0,  \text{  otherwise }
 \end{cases}$
 
-let max $(X_1,X_2)=i$ and Pr(i) denotes the probability that $X = \text{max } (X_1,X_2)=i$
+let max $(X_1,X_2)=i$ and $Pr(X=i)$ denotes the probability that $X = \text{max } (X_1,X_2)=i$
  \begin{multline}
  \noindent
-Pr(\text{max } (X_1,X_2)=i)=Pr(X_1=i\text{ and }X_2<i)\\
+Pr(X=i)=Pr(X_1=i\text{ and }X_2<i)\\
  +Pr(X_2=i\text{ and }X_1<i) \label{eqn_(0.0.1)}
 \end{multline}
  
@@ -84,12 +84,15 @@ since choosing of $X_1,X_2$ are independent events, so we can write
 $$Pr(X_1 \text{ and }X_2)=Pr(X_1)Pr(X_2)$$
 Substituting this in \eqref{eqn_(0.0.1)} gives us
 \begin{multline}
-Pr(i)=Pr(X_1=i)Pr(X_2<i)+\\
+Pr(X=i)=Pr(X_1=i)Pr(X_2<i)+\\
 Pr(X_2=i)Pr(X_1<i)
 \end{multline}
 
-$$\Longrightarrow Pr(X=i)=\dfrac{1}{6}\times \dfrac{(i-1)}{5}+\dfrac{(i-1)}{6} \times\dfrac{1}{5}$$
-$$\Longrightarrow Pr(X=n)=\dfrac{(i-1)}{15}$$
+\begin{align}
+& \Longrightarrow Pr(X=i)=\dfrac{1}{6}\times \dfrac{(i-1)}{5}+\dfrac{(i-1)}{6} \times\dfrac{1}{5}\\
+& \Longrightarrow Pr(X=n)=\dfrac{(i-1)}{15}
+\end{align}
+
 The expectation value of X represented by E(X) is given by
 $$E(X)=\sum_{i=1}^{6} Pr(X=i)\times i$$
 \begin{align}
