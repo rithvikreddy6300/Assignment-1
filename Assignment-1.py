@@ -13,6 +13,7 @@ import array as arr
 N=6
 # number of experiments or simulations
 siml_size=1000000
+no_of_exp=siml_size
 
 #declared an array of single element then appended it to have N elements initialized to 0
 a=arr.array('I',[0])
@@ -27,18 +28,22 @@ j=0
 while (j<siml_size):
   X1=rand.randint(1,6)
   X2=rand.randint(1,6)
-  if (X1>=X2):
+  if (X1>X2):
     a[X1-1]+=1
-  else:
+  elif (X1<X2):
     a[X2-1]+=1
+  # if X1=X2 then the number is repeating which is not allowed so we should not consider this as a valid experiment 
+  elif (X1==X2):
+    no_of_exp-=1
   j+=1
 
 # finding expextation value using the formula
 i=0
 Exp_val_X=0
 while(i<N):
-  Exp_val_X+=(a[i]*(i+1))/siml_size
+  Exp_val_X+=(a[i]*(i+1))/no_of_exp
   i+=1
 print(f"The Expectation value obtained by simulation is : {Exp_val_X}")
 # the expression used below can be obtaine from solution pdf for any general N
-print(f"The value obtained by calculation is : {(4*N**2+3*N-1)/(6*N)}")
+print(f"The value obtained by calculation is : {2*(N+1)/3}")
+print("These values are very close")
