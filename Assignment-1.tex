@@ -16,11 +16,11 @@
 \setlength{\columnsep}{0.5cm}
 \setlength{\parindent}{0em}
 \usepackage{color}
-
 \usepackage{comment}
-
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
+
+
 
 \begin{document}
 \maketitle
@@ -88,21 +88,24 @@ Pr(X_2=i)Pr(X_1<i)
 \end{multline}
 
 \begin{align}
-& \Longrightarrow Pr(X=i)=\dfrac{1}{6}\times \dfrac{(i-1)}{5}+\dfrac{(i-1)}{6} \times\dfrac{1}{5}\\
-& \Longrightarrow Pr(X=n)=\dfrac{(i-1)}{15}
+& \implies Pr(X=i)=\dfrac{1}{6}\times \dfrac{(i-1)}{5}+\dfrac{(i-1)}{6} \times\dfrac{1}{5}\\
+& \implies Pr(X=n)=\dfrac{(i-1)}{15}
 \end{align}
 
 The expectation value of X represented by E(X) is given by
 $$E(X)=\sum_{i=1}^{6} Pr(X=i)\times i$$
 \begin{align}
-& \Longrightarrow E(X)=\sum_{i=1}^{6} \dfrac{(i-1)}{15}\times i\\
-& \Longrightarrow E(X)=\sum_{i=1}^{6} \dfrac{(i^2-i)}{15}\\
-& \Longrightarrow E(X)=\dfrac{1}{15} \sum_{i=1}^{6} i^2-\dfrac{1}{15}\sum_{i=1}^{6} i\\
-& \Longrightarrow E(X)=\dfrac{1}{15} \times 91-\dfrac{1}{15} \times 21\\
-& \Longrightarrow E(X)= \textbf{4.6667}
+& \implies E(X)=\sum_{i=1}^{6} \dfrac{(i-1)}{15}\times i\\
+& \implies E(X)=\sum_{i=1}^{6} \dfrac{(i^2-i)}{15}\\
+& \implies E(X)=\dfrac{1}{15} \sum_{i=1}^{6} i^2-\dfrac{1}{15}\sum_{i=1}^{6} i\\
+& \implies E(X)=\dfrac{1}{15} \times 91-\dfrac{1}{15} \times 21\\
+& \implies E(X)= \textbf{4.6667}
 \end{align}
 Therefore the expectation value of X, 
 
 E(X)= \textbf{4.6667}.
+
 \end{multicols*}
+
+
 \end{document}
